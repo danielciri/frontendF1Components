@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface DriverCardAllRaces {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -20,19 +22,37 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SmallDriverCard {
+    }
 }
 declare global {
+    interface HTMLDriverCardAllRacesElement extends Components.DriverCardAllRaces, HTMLStencilElement {
+    }
+    var HTMLDriverCardAllRacesElement: {
+        prototype: HTMLDriverCardAllRacesElement;
+        new (): HTMLDriverCardAllRacesElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSmallDriverCardElement extends Components.SmallDriverCard, HTMLStencilElement {
+    }
+    var HTMLSmallDriverCardElement: {
+        prototype: HTMLSmallDriverCardElement;
+        new (): HTMLSmallDriverCardElement;
+    };
     interface HTMLElementTagNameMap {
+        "driver-card-all-races": HTMLDriverCardAllRacesElement;
         "my-component": HTMLMyComponentElement;
+        "small-driver-card": HTMLSmallDriverCardElement;
     }
 }
 declare namespace LocalJSX {
+    interface DriverCardAllRaces {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -47,15 +67,21 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SmallDriverCard {
+    }
     interface IntrinsicElements {
+        "driver-card-all-races": DriverCardAllRaces;
         "my-component": MyComponent;
+        "small-driver-card": SmallDriverCard;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "driver-card-all-races": LocalJSX.DriverCardAllRaces & JSXBase.HTMLAttributes<HTMLDriverCardAllRacesElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "small-driver-card": LocalJSX.SmallDriverCard & JSXBase.HTMLAttributes<HTMLSmallDriverCardElement>;
         }
     }
 }
