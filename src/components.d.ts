@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface DriverCardAllRaces {
     }
+    interface DriverCardRankingRaces {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -32,6 +34,12 @@ declare global {
         prototype: HTMLDriverCardAllRacesElement;
         new (): HTMLDriverCardAllRacesElement;
     };
+    interface HTMLDriverCardRankingRacesElement extends Components.DriverCardRankingRaces, HTMLStencilElement {
+    }
+    var HTMLDriverCardRankingRacesElement: {
+        prototype: HTMLDriverCardRankingRacesElement;
+        new (): HTMLDriverCardRankingRacesElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -46,12 +54,15 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "driver-card-all-races": HTMLDriverCardAllRacesElement;
+        "driver-card-ranking-races": HTMLDriverCardRankingRacesElement;
         "my-component": HTMLMyComponentElement;
         "small-driver-card": HTMLSmallDriverCardElement;
     }
 }
 declare namespace LocalJSX {
     interface DriverCardAllRaces {
+    }
+    interface DriverCardRankingRaces {
     }
     interface MyComponent {
         /**
@@ -71,6 +82,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "driver-card-all-races": DriverCardAllRaces;
+        "driver-card-ranking-races": DriverCardRankingRaces;
         "my-component": MyComponent;
         "small-driver-card": SmallDriverCard;
     }
@@ -80,6 +92,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "driver-card-all-races": LocalJSX.DriverCardAllRaces & JSXBase.HTMLAttributes<HTMLDriverCardAllRacesElement>;
+            "driver-card-ranking-races": LocalJSX.DriverCardRankingRaces & JSXBase.HTMLAttributes<HTMLDriverCardRankingRacesElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "small-driver-card": LocalJSX.SmallDriverCard & JSXBase.HTMLAttributes<HTMLSmallDriverCardElement>;
         }
