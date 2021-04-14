@@ -7,8 +7,14 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface DriverCardAllRaces {
+        "position": number;
+        "race": string;
+        "time": string;
     }
     interface DriverCardRankingRaces {
+        "name": string;
+        "rank": number;
+        "team": string;
     }
     interface MyComponent {
         /**
@@ -25,6 +31,10 @@ export namespace Components {
         "middle": string;
     }
     interface SmallDriverCard {
+        "age": number;
+        "name": string;
+        "rank": number;
+        "team": string;
     }
 }
 declare global {
@@ -61,8 +71,14 @@ declare global {
 }
 declare namespace LocalJSX {
     interface DriverCardAllRaces {
+        "position"?: number;
+        "race"?: string;
+        "time"?: string;
     }
     interface DriverCardRankingRaces {
+        "name"?: string;
+        "rank"?: number;
+        "team"?: string;
     }
     interface MyComponent {
         /**
@@ -79,6 +95,10 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface SmallDriverCard {
+        "age"?: number;
+        "name"?: string;
+        "rank"?: number;
+        "team"?: string;
     }
     interface IntrinsicElements {
         "driver-card-all-races": DriverCardAllRaces;

@@ -20,9 +20,16 @@
     <script nomodule src="/build/f1-championship-web-component.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+
     <div class="container">
-      <driver-card-ranking-races></driver-card-ranking-races>
+      <div class="row">
+        <div class="col-10 col-sm-5 col-md-4">
+          <small-driver-card name="daniel"  age="24" team="Ferrari" rank="22" ></small-driver-card>
+        </div>
+        <div class="col-10 col-sm-5 col-md-5">
+          <driver-card-all-races race="GP BAREIN" position="22" time="1:8:2.2"></driver-card-all-races>
+        </div>
+      </div>
     </div>
 
     <script

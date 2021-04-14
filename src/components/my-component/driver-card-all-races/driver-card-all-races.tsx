@@ -1,10 +1,14 @@
-import { Component, h } from '@stencil/core'
+import { Component, h, Prop } from '@stencil/core'
 
 @Component({
   tag: 'driver-card-all-races',
-  styleUrl: 'driver-card-all-races.css'
+  styleUrl: 'driver-card-all-races.css',
+
 })
 export class DriverCardAllRaces {
+  @Prop() race:string;
+  @Prop() time:string;
+  @Prop() position: number;
   render() {
     return (
 
@@ -28,9 +32,9 @@ export class DriverCardAllRaces {
         <div class="card-body daniel">
           <table class="table table-bordered table-striped" >
             <tbody class="tbody races">
-            <td>asdas</td>
-            <td>sadas</td>
-            <td>sadasd</td>
+            <td>{this.race}</td>
+            <td>{this.position}</td>
+            <td>{this.time}</td>
             <br></br>
             <br></br>
             </tbody>
