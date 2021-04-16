@@ -18,9 +18,6 @@ export namespace Components {
         "time": string;
     }
     interface DriverCardRankingRaces {
-        "name": string;
-        "rank": number;
-        "team": string;
     }
     interface MyComponent {
         /**
@@ -82,9 +79,6 @@ declare namespace LocalJSX {
         "time"?: string;
     }
     interface DriverCardRankingRaces {
-        "name"?: string;
-        "rank"?: number;
-        "team"?: string;
     }
     interface MyComponent {
         /**

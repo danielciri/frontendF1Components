@@ -1,11 +1,11 @@
-table thead tr {
+table .thead tr {
   background-color: #06b70b;
   color: white;
 }
 
-table thead tr th {
+table .thead tr th {
   width: 150px;
-  text-align: left;
+  text-align: center;
 }
 
 .contentTable .card-img-top {
@@ -32,7 +32,7 @@ table tbody :hover {
 
 td {
   border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
   padding: 8px;
 }
 
