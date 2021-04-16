@@ -1,6 +1,12 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
+  bundles: [
+    { components: ['btn-races-component'] },
+    { components: ['driver-card-ranking-races'] },
+    { components: ['driver-card-all-races'] },
+    
+  ],
   namespace: 'f1-championship-web-component',
   outputTargets: [
     {
@@ -15,6 +21,7 @@ export const config: Config = {
     },
     {
       type: 'www',
+      buildDir: 'stencil-components/build',
       serviceWorker: null, // disable service workers
     },
   ],

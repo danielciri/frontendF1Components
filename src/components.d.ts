@@ -6,9 +6,15 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface BtnRacesComponent {
+    }
     interface DriverCardAllRaces {
+        "age": number;
+        "name": string;
         "position": number;
         "race": string;
+        "rank": number;
+        "team": string;
         "time": string;
     }
     interface DriverCardRankingRaces {
@@ -30,14 +36,14 @@ export namespace Components {
          */
         "middle": string;
     }
-    interface SmallDriverCard {
-        "age": number;
-        "name": string;
-        "rank": number;
-        "team": string;
-    }
 }
 declare global {
+    interface HTMLBtnRacesComponentElement extends Components.BtnRacesComponent, HTMLStencilElement {
+    }
+    var HTMLBtnRacesComponentElement: {
+        prototype: HTMLBtnRacesComponentElement;
+        new (): HTMLBtnRacesComponentElement;
+    };
     interface HTMLDriverCardAllRacesElement extends Components.DriverCardAllRaces, HTMLStencilElement {
     }
     var HTMLDriverCardAllRacesElement: {
@@ -56,23 +62,23 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
-    interface HTMLSmallDriverCardElement extends Components.SmallDriverCard, HTMLStencilElement {
-    }
-    var HTMLSmallDriverCardElement: {
-        prototype: HTMLSmallDriverCardElement;
-        new (): HTMLSmallDriverCardElement;
-    };
     interface HTMLElementTagNameMap {
+        "btn-races-component": HTMLBtnRacesComponentElement;
         "driver-card-all-races": HTMLDriverCardAllRacesElement;
         "driver-card-ranking-races": HTMLDriverCardRankingRacesElement;
         "my-component": HTMLMyComponentElement;
-        "small-driver-card": HTMLSmallDriverCardElement;
     }
 }
 declare namespace LocalJSX {
+    interface BtnRacesComponent {
+    }
     interface DriverCardAllRaces {
+        "age"?: number;
+        "name"?: string;
         "position"?: number;
         "race"?: string;
+        "rank"?: number;
+        "team"?: string;
         "time"?: string;
     }
     interface DriverCardRankingRaces {
@@ -94,27 +100,21 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
-    interface SmallDriverCard {
-        "age"?: number;
-        "name"?: string;
-        "rank"?: number;
-        "team"?: string;
-    }
     interface IntrinsicElements {
+        "btn-races-component": BtnRacesComponent;
         "driver-card-all-races": DriverCardAllRaces;
         "driver-card-ranking-races": DriverCardRankingRaces;
         "my-component": MyComponent;
-        "small-driver-card": SmallDriverCard;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "btn-races-component": LocalJSX.BtnRacesComponent & JSXBase.HTMLAttributes<HTMLBtnRacesComponentElement>;
             "driver-card-all-races": LocalJSX.DriverCardAllRaces & JSXBase.HTMLAttributes<HTMLDriverCardAllRacesElement>;
             "driver-card-ranking-races": LocalJSX.DriverCardRankingRaces & JSXBase.HTMLAttributes<HTMLDriverCardRankingRacesElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "small-driver-card": LocalJSX.SmallDriverCard & JSXBase.HTMLAttributes<HTMLSmallDriverCardElement>;
         }
     }
 }
